@@ -23,3 +23,61 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
+.body{
+  
+  display: flex;
+    justify-content: space-between;
+  
+}
+#datetime-picker{
+  
+  justify-content: start;
+  width: 230px;
+  height: 25px;
+  font-size: 15px;
+  text-align: center;
+  
+
+
+}
+.first {
+  display: flex;
+  justify-content: start;
+  /* Вирівнювання елементів по горизонталі в центрі */
+  max-width: 350px;
+  margin: 10px;
+  margin-bottom: 20px;
+}
+
+.timer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  /* Вирівнювання елементів по горизонталі в центрі */
+  
+}
+.btn{
+  margin-left: 15px;
+  
+}
+
+.text{
+  margin-bottom: 20px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+}
+
+.value {
+  font-size: 40px;
+}
+
+.label {
+  font-size: 20px;
+  color: black;
+  margin-top: 10px;
+}
