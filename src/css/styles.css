@@ -43,7 +43,6 @@
 .first {
   display: flex;
   justify-content: start;
-  /* Вирівнювання елементів по горизонталі в центрі */
   max-width: 350px;
   margin: 10px;
   margin-bottom: 20px;
@@ -53,7 +52,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: start;
-  /* Вирівнювання елементів по горизонталі в центрі */
+
   
 }
 .btn{
@@ -80,4 +79,67 @@
   font-size: 20px;
   color: black;
   margin-top: 10px;
+}
+
+
+
+
+.body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.form {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 200px;
+}
+
+.form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.form input[type="number"],
+.form input[type="radio"] {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.form button {
+  width: 100%;
+  padding: 8px;
+  margin-top: 10px;
+}
+
+
+.iziToast {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 300px;
+}
+
+.iziToast>div {
+  margin-bottom: 10px;
+}
+
+
+/* New styles */
+.form fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.form fieldset label {
+  margin-right: 10px;
+}
+
+.form fieldset label:last-child {
+  margin-right: 0;
 }
