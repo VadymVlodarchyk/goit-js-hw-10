@@ -7,18 +7,14 @@ const datetimePicker = document.getElementById("datetime-picker");
 const startButton = document.querySelector("[data-start]");
 let userSelectedDate = null;
 
-// Деактивація кнопки при першому завантаженні
 window.onload = () => {
   startButton.disabled = true;
-
-  // Додаємо ідентифікатори до елементів із data-атрибутами
   document.querySelector("[data-days]").setAttribute("id", "days");
   document.querySelector("[data-hours]").setAttribute("id", "hours");
   document.querySelector("[data-minutes]").setAttribute("id", "minutes");
   document.querySelector("[data-seconds]").setAttribute("id", "seconds");
 };
 
-// Ініціалізація flatpickr
 const options = {
   enableTime: true,
   time_24hr: true,
@@ -30,6 +26,9 @@ const options = {
       iziToast.error({
         title: "Error",
         message: "Please choose a date in the future",
+        position: 'topRight',
+        timeout: 5000,
+        closeOnClick: true,
       });
       startButton.disabled = true;
     } else {
@@ -40,12 +39,10 @@ const options = {
 
 flatpickr(datetimePicker, options);
 
-// Додавання ведучого нуля
 function addLeadingZero(value) {
   return String(value).padStart(2, "0");
 }
 
-// Конвертація мілісекунд у дні, години, хвилини, секунди
 function convertMs(ms) {
   const second = 1000;
   const minute = second * 60;
@@ -60,7 +57,6 @@ function convertMs(ms) {
   return { days, hours, minutes, seconds };
 }
 
-// Оновлення таймера
 function updateTimer() {
   const now = new Date();
   const timeLeft = userSelectedDate - now;
@@ -76,6 +72,9 @@ function updateTimer() {
     iziToast.success({
       title: "Success",
       message: "The timer has finished!",
+      position: 'topRight',
+      timeout: 5000,
+      closeOnClick: true,
     });
     return;
   }
@@ -88,7 +87,6 @@ function updateTimer() {
   document.getElementById("seconds").textContent = addLeadingZero(seconds);
 }
 
-// Запуск таймера
 let timerInterval;
 startButton.addEventListener("click", () => {
   if (!userSelectedDate || userSelectedDate < new Date()) return;

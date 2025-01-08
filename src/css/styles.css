@@ -137,3 +137,14 @@ body {
 .form fieldset label:last-child {
   margin-right: 0;
 }
+.link {
+  text-decoration: none;
+  color: #000;
+  font-size: 18px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.link:hover {
+  color: #1539ef;
+  transform: scale(1.1);
+}
