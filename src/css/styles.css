@@ -16,3 +16,124 @@
 @import url('./badges.css');
 @import url('./back-link.css');
 @import url('./footer.css');
+
+/* Root styles */
+:root {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #242424;
+  background-color: rgba(255, 255, 255, 0.87);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* General body styling */
+body {
+  display: flex;
+  justify-content: space-between;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Date picker input */
+#datetime-picker {
+  width: 230px;
+  height: 25px;
+  font-size: 15px;
+  text-align: center;
+}
+
+/* Timer section */
+.timer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+}
+
+/* Timer field styling */
+.field {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+}
+
+.value {
+  font-size: 40px;
+}
+
+.label {
+  font-size: 20px;
+  color: black;
+  margin-top: 10px;
+}
+
+/* Button styling */
+.btn {
+  margin-left: 15px;
+}
+
+/* Text margin */
+.text {
+  margin-bottom: 20px;
+}
+
+/* Form styling */
+.form {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 200px;
+}
+
+.form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.form input[type="number"],
+.form input[type="radio"] {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.form button {
+  width: 100%;
+  padding: 8px;
+  margin-top: 10px;
+}
+
+/* iziToast styling */
+.iziToast {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 300px;
+}
+
+.iziToast>div {
+  margin-bottom: 10px;
+}
+
+/* New form styles */
+.form fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.form fieldset label {
+  margin-right: 10px;
+}
+
+.form fieldset label:last-child {
+  margin-right: 0;
+}
